@@ -1,8 +1,10 @@
 from django.db import models
 
-# Create your models here.
 
 class Blog(models.Model):
+    """
+    This model keeps a record of all the blog details.
+    """
     title = models.CharField(max_length=50)
     pub_date = models.DateTimeField()
     body = models.TextField()
@@ -16,4 +18,3 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
-
